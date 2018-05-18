@@ -4,6 +4,7 @@ import { StackNavigator } from 'react-navigation';
 
 import HomeScreen from '../Index';
 import Reminder from '../Reminder'
+import Timer from '../Timer'
 
 const RootStack = StackNavigator({
 	Overview: {
@@ -15,6 +16,11 @@ const RootStack = StackNavigator({
 		// screen: HomeTabNav,
 		headerTitle: 'reminder',
 		screen: Reminder,
+	},
+	Timer: {
+		// screen: HomeTabNav,
+		headerTitle: 'countdown',
+		screen: Timer,
 	},
 }, {
 	initialRouteName: 'Overview',

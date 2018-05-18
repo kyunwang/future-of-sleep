@@ -27,7 +27,7 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class App extends Component<Props> {
+export default class Reminder extends Component<Props> {
   render() {
     return (
       <View>
@@ -38,7 +38,7 @@ export default class App extends Component<Props> {
         <StyledText>
           make sure you are lying down or reclined in a chair
         </StyledText>
-        <FingerPrint/>
+        <FingerPrint navigation={this.props.navigation}/>
       </View>
     );
   }
