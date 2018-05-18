@@ -8,10 +8,15 @@ import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
-  Text,
   View,
   Button
 } from 'react-native';
+
+import styled from 'styled-components';
+
+const StyledText = styled.Text`
+	color: black;
+`;
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -24,40 +29,19 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={}>
-        <Text style={>
+      <View>
+        <StyledText>
         Make sure your device is plugged in to your charger.
         Do not close the app.
-        </Text>
-        <Text style={}>
+        </StyledText>
+        <StyledText>
           make sure you are lying down or reclined in a chair
-        </Text>
-        <Button style={}>
-        next
-        </Button>
+        </StyledText>
+        <Button
+          title="next"
+          onPress={() => this.props.navigation.navigate('Details')}
+        />
       </View>
     );
   }
 }
-//
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#F5FCFF',
-//   },
-//   welcome: {
-//     fontSize: 20,
-//     textAlign: 'center',
-//     margin: 10,
-//   },
-//   instructions: {
-//     textAlign: 'center',
-//     color: '#333333',
-//     marginBottom: 5,
-//   },
-//   button: {
-//     font-size: 40
-//   }
-// });
