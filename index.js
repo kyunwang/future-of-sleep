@@ -1,5 +1,5 @@
 import { AppRegistry } from 'react-native';
-import App from './app/reminder';
 
+import RootNavigation from './app/navigation/RootNavigation';
 
-AppRegistry.registerComponent('futureOfSleep', () => App);
+AppRegistry.registerComponent('futureOfSleep', () => RootNavigation);
