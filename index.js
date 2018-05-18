@@ -1,4 +1,5 @@
 import { AppRegistry } from 'react-native';
-import App from './app';
 
-AppRegistry.registerComponent('futureOfSleep', () => App);
+import RootNavigation from './app/navigation/RootNavigation';
+
+AppRegistry.registerComponent('futureOfSleep', () => RootNavigation);
