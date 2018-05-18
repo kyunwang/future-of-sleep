@@ -2,13 +2,19 @@ import React from 'react';
 
 import { StackNavigator } from 'react-navigation';
 
-import HomeScreen from '../index';
+import HomeScreen from '../Index';
+import Reminder from '../Reminder'
 
 const RootStack = StackNavigator({
 	Overview: {
 		// screen: HomeTabNav,
 		headerTitle: 'overview',
 		screen: HomeScreen,
+	},
+	Reminder: {
+		// screen: HomeTabNav,
+		headerTitle: 'reminder',
+		screen: Reminder,
 	},
 }, {
 	initialRouteName: 'Overview',
