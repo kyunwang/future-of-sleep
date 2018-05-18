@@ -1,13 +1,10 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
  * @flow
  */
 
 import React, { Component } from 'react';
 import {
   Platform,
-  Text,
   View
 } from 'react-native';
 
@@ -15,6 +12,18 @@ import styled from 'styled-components';
 
 const StyledText = styled.Text`
 	color: red;
+`;
+
+const HeaderText = styled.Text`
+	font-size: 24;
+`;
+
+const SelectItemCon = styled.View`
+	flex-direction: row;
+`;
+
+const CtaButton = styled.Button`
+
 `;
 
 const instructions = Platform.select({
@@ -30,15 +39,23 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View>
-        <StyledText>
-          Welcome to React Native
-        </StyledText>
-        <StyledText>
-          To get started, edit App
-        </StyledText>
-        <StyledText>
-          {instructions}
-        </StyledText>
+        <HeaderText>Set Timer</HeaderText>
+
+		  <SelectItemCon>
+				<StyledText>Alarm sound</StyledText>
+				<StyledText>Ambient Sound</StyledText>
+		  </SelectItemCon>
+		  <SelectItemCon>
+				<StyledText>Volume</StyledText>
+				<StyledText>Volume slider</StyledText>
+		  </SelectItemCon>
+		  <SelectItemCon>
+				<StyledText>Vibration</StyledText>
+				<StyledText>Relax</StyledText>
+		  </SelectItemCon>
+
+
+        <CtaButton title="Start"/>
       </View>
     );
   }
