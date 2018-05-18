@@ -5,7 +5,9 @@
 import React, { Component } from 'react';
 import {
   Platform,
-  View
+  View,
+  Picker,
+  DatePickerIOS
 } from 'react-native';
 
 import styled from 'styled-components';
@@ -41,6 +43,12 @@ export default class App extends Component<Props> {
       <View>
         <HeaderText>Set Timer</HeaderText>
 
+		  <Picker>
+		  		<Picker.Item label="Java" value="java" />
+  				<Picker.Item label="JavaScript" value="js" />
+		  </Picker>
+
+
 		  <SelectItemCon>
 				<StyledText>Alarm sound</StyledText>
 				<StyledText>Ambient Sound</StyledText>
@@ -55,7 +63,10 @@ export default class App extends Component<Props> {
 		  </SelectItemCon>
 
 
-        <CtaButton title="Start"/>
+        <CtaButton
+		  		title="Start"
+				onPress={() => this.props.navigation.navigate('Reminder')}
+			/>
       </View>
     );
   }

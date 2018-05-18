@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StackNavigator } from 'react-navigation';
 
-import HomeScreen from '../Index';
+import HomeScreen from '../index';
 import Reminder from '../Reminder'
 
 const RootStack = StackNavigator({
