@@ -12,6 +12,7 @@ import {
   Button
 } from 'react-native';
 
+import FingerPrint from './TouchID'
 import styled from 'styled-components';
 
 const StyledText = styled.Text`
@@ -37,10 +38,7 @@ export default class App extends Component<Props> {
         <StyledText>
           make sure you are lying down or reclined in a chair
         </StyledText>
-        <Button
-          title="next"
-          onPress={() => this.props.navigation.navigate('Details')}
-        />
+        <FingerPrint/>
       </View>
     );
   }
