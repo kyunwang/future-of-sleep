@@ -24,3 +24,59 @@ body {
   line-height: 1.3;
   background-color: #f53065;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*
+====================
+  times
+====================
+*/
+
+.time-slept,
+.time-productive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.heading {
+  margin: 1.5rem;
+  font-size: 1.5em;
+}
+
+.time {
+  font-size: 3em;
+}
+
+/*
+====================
+  reset-btn
+====================
+*/
+
+.reset-btn:disabled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 10rem;
+  height: 3.125rem;
+  padding: 0;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin: 1.5rem auto;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: none;
+  opacity: .5;
+}
